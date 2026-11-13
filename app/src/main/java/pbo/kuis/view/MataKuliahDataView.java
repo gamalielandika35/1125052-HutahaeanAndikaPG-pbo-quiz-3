@@ -1,26 +1,24 @@
 package pbo.kuis.view;
-import pbo.kuis.model.Mahasiswa;
+import pbo.kuis.model.MataKuliah;
 
-public class MataKuliahDataView extends DataView<Mahasiswa> {
-    protected String getPrimaryKey(Mahasiswa item) {
-        return item.();
+public class MataKuliahDataView extends DataView<MataKuliah> {
+    protected String getPrimaryKey(MataKuliah item) {
+        return item.getKode();
     }
     protected String[] getFields() {
-        return new String[]{"NIM", "Nama", "Email", "Umur"};
+        return new String[]{"Kode", "Nama", "SKS"};
     }
-    protected Mahasiswa convertValuesTModel(String[] values) {
-        String nim = values[0];
+    protected MataKuliah convertValuesTModel(String[] values) {
+        String kode = values[0];
         String nama = values[1];
-        String email = values[2];
-        int umur = Integer.parseInt(values[3]);
-        return new Mahasiswa(nim, nama, email, umur) {};
+        int sks = Integer.parseInt(values[2]);
+        return new MataKuliah(kode, nama, sks);
     }
-    protected String[] comvertModelToValues(Mahasiswa item) {
-        String[] values = new String[4];
-        values[0] = item.getNim();
+    protected String[] convertModelToValues(MataKuliah item) {
+        String[] values = new String[3];
+        values[0] = item.getKode();
         values[1] = item.getNama();
-        values[2] = item.getEmail();
-        values[3] = String.valueOf(item.getUmur());
+        values[2] = String.valueOf(item.getSks());
         return values;
     }
 }
