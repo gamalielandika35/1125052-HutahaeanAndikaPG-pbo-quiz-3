@@ -1,11 +1,12 @@
-package pbo.kuis.model;
+package pbo.kuis.view;
+import pbo.kuis.model.Mahasiswa;
 
 public class MahasiswaDataView extends DataView<Mahasiswa> {
     protected String getPrimaryKey(Mahasiswa item) {
         return item.getNim();
     }
-    protected String getFields() {
-        return "NIM, Nama, Email, Umur";
+    protected String[] getFields() {
+        return new String[]{"NIM", "Nama", "Email", "Umur"};
     }
     protected Mahasiswa convertValuesTModel(String[] values) {
         String nim = values[0];
