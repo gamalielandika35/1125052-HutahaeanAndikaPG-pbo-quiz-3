@@ -6,7 +6,7 @@ public abstract class Mahasiswa {
     private String email;
     private int umur;
 
-    public Mahasiswa(String nim, String name,String email,  int umur) {
+    public Mahasiswa(String nim, String nama,String email,  int umur) {
         this.nim = nim;
         this.nama = nama;
         this.email = email;
@@ -44,6 +44,5 @@ public abstract class Mahasiswa {
     public void setUmur(int umur) {
         this.umur = umur;
     }
-    
 }
 
