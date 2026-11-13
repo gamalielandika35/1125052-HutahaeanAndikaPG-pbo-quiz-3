@@ -21,7 +21,9 @@ public abstract class DataView<T>{
         this.items = items;
     }
 
-    public void printAll()
+    public void printAll(){
+        String[] fields = this.getFields();
+    }
 
     public void printByPk(String primaryKey)
 
