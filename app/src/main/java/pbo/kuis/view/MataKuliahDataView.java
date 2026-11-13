@@ -1,9 +1,9 @@
 package pbo.kuis.view;
 import pbo.kuis.model.Mahasiswa;
 
-public class MahasiswaDataView extends DataView<Mahasiswa> {
+public class MataKuliahDataView extends DataView<Mahasiswa> {
     protected String getPrimaryKey(Mahasiswa item) {
-        return item.getNim();
+        return item.();
     }
     protected String[] getFields() {
         return new String[]{"NIM", "Nama", "Email", "Umur"};
